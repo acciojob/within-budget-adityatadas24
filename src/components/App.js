@@ -28,10 +28,10 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {items.map((item, index) => (
+          {itemData.map((item, index) => (
             <tr key={index}>
               <td>{item.name}</td>
-              <td style={{ color: item.value > budget ? 'red' : 'green' }}>
+              <td style={{ color: item.quantity > items ? 'red' : 'green' }}>
                 {item.value}
               </td>
             </tr>
