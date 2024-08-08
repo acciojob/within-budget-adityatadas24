@@ -31,7 +31,7 @@ const App = () => {
           {itemData.map((item, index) => (
             <tr key={index}>
               <td>{item.name}</td>
-              <td style={{ color: item.quantity > items ? 'red' : 'green' }}>
+              <td style={{ color: item.quantity > items ? 'rgb(255, 0, 0)' : 'rgb(0, 128, 0)' }}>
                 {item.value}
               </td>
             </tr>
