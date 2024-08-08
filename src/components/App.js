@@ -20,14 +20,24 @@ const App = () => {
         value={items}
         onChange={(e) => setItems(e.target.value)}
       />
-        {itemData.map((item, index) => (
-        <p key={index}>
-          {item.name}{' '}
-          <span style={{ color: item.quantity > items ? 'red' : 'green' }}>
-            {item.quantity}
-          </span>
-        </p>
-      ))}
+         <table border="1">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item, index) => (
+            <tr key={index}>
+              <td>{item.name}</td>
+              <td style={{ color: item.value > budget ? 'red' : 'green' }}>
+                {item.value}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }
